@@ -44,11 +44,19 @@ app.use(express.json());
 
 // Basic route for GET request
 app.get("/fetch-statistic", (req, res) => {
-  res.send(statisticData);
+  try {
+    res.send(statisticData);
+  } catch (e) {
+    console.log(e);
+  }
 });
 
 app.get("/fetch-lbdata", (req, res) => {
-  res.send(LBData);
+  try {
+    res.send(LBData);
+  } catch (e) {
+    console.log(e);
+  }
 });
 // Start the Express server
 app.listen(PORT, () => {
