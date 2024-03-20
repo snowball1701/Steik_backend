@@ -5,7 +5,7 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const cosmWasmClient = getCosmWasmClient("https://sei-rpc.polkachu.com/");
+const cosmWasmClient = getCosmWasmClient("https://sei-rpc.brocha.in/");
 let statisticData = {};
 let LBData = {};
 
