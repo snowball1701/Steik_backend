@@ -29,8 +29,12 @@ const fetchLBData = async () => {
   return response?.claimed_info;
 };
 const fetchUpdate = async () => {
-  LBData = await fetchLBData();
-  statisticData = await fetchStatistic();
+  try {
+    LBData = await fetchLBData();
+    statisticData = await fetchStatistic();
+  } catch (e) {
+    console.log(e);
+  }
 
   setTimeout(() => {
     fetchUpdate();
